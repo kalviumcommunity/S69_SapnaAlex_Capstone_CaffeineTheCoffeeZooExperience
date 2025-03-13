@@ -18,4 +18,4 @@ const CoffeeProfile = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("coffeeFlavour", CoffeeProfile);
+module.exports = mongoose.model("coffeeProfile", CoffeeProfile);
