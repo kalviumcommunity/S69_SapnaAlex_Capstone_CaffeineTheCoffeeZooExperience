@@ -7,7 +7,7 @@ const CoffeeCompanion = new mongoose.Schema({
     },
     personality:{
         type: String,
-        required
+        required: true
     },
     coffeeProfile:{
         type: String
