@@ -8,6 +8,7 @@ const Games = require("./Games");
 const Leaderboards = require("./Leaderboards");
 const Notifications = require("./Notifications");
 const Recipes = require("./Recipes");
+const Users =  require("./Users");
 
 
 module.exports ={
@@ -20,5 +21,6 @@ module.exports ={
     Games,
     Leaderboards,
     Notifications,
-    Recipes
+    Recipes,
+    Users
 };
