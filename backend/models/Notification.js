@@ -11,4 +11,4 @@ const Notifications = new mongoose.Schema({
 })
 
 
-module.exports = mongoose.model("notificationSchema", Notifications);
+module.exports = mongoose.model("NotificationSchema", Notifications);
