@@ -1,0 +1,17 @@
+const mongoose = require("mongoose");
+
+const CoffeeCompanion = new mongoose.Schema({
+    CompanionName:{
+        type: String,
+        required: true
+    },
+    personality:{
+        type: String,
+        required
+    },
+    coffeeProfile:{
+        type: String
+    }
+})
+
+module.exports = mongoose.model("CompanionSchema", CoffeeCompanion);
