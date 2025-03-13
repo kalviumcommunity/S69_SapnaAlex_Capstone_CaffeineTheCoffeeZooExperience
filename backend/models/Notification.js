@@ -5,7 +5,8 @@ const Notifications = new mongoose.Schema({
         type: String
     },
     sentAt: {
-        type: Date.now
+        type: Date,
+        default: Date.now
     }
 })
 
