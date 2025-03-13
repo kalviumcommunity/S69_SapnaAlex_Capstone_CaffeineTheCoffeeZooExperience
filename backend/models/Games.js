@@ -7,12 +7,12 @@ const Games = new mongoose.Schema({
     },
     difficultyLevel:{
         type: String,
-        enum: [easy, moderate, hard],
+        enum: ["easy", "moderate", "hard"],
         required: true
     },
     Type:{
         type: String,
-        enum:[Bean-Hunt, Brew-Master],
+        enum:["Bean-Hunt", "Brew-Master"],
         required: true
     },
     description:{
