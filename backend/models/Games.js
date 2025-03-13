@@ -10,7 +10,7 @@ const Games = new mongoose.Schema({
         enum: ["easy", "moderate", "hard"],
         required: true
     },
-    Type:{
+    gameTypes:{
         type: String,
         enum:["Bean-Hunt", "Brew-Master"],
         required: true

@@ -14,4 +14,4 @@ const CoffeeCompanion = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("CompanionSchema", CoffeeCompanion);
+module.exports = mongoose.model("CoffeeCompanion", CoffeeCompanion);
