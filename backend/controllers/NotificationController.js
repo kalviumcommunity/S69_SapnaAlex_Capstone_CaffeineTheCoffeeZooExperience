@@ -1,5 +1,6 @@
 const Notification = require("../models/Notification");
 
+
 exports.createNotification = async (req, res) => {
     try {
         const newNotification = new Notification(req.body);
@@ -10,24 +11,30 @@ exports.createNotification = async (req, res) => {
     }
 };
 
+
 exports.getAllNotifications = async (req, res) => {
     try {
-        const notifications = await Notification.find();
+        const notifications = await Notification.find().populate("user", "username email").sort({ createdAt: -1 });
         res.status(200).json(notifications);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
 
-exports.getNotificationById = async (req, res) => {
+
+exports.getNotificationsByUserId = async (req, res) => {
     try {
-        const notification = await Notification.findById(req.params.id);
-        if (!notification) return res.status(404).json({ message: "Notification not found" });
-        res.status(200).json(notification);
+        const notifications = await Notification.find({ user: req.params.userId })
+            .populate("user", "username email")
+            .sort({ createdAt: -1 });
+
+        res.status(200).json(notifications);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
+
 
 exports.deleteNotification = async (req, res) => {
     try {

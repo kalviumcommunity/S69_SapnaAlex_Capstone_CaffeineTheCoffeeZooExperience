@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const CoffeeProfile = new mongoose.Schema({
+    linkedCoffeeCompanion:{
+        type:mongoose.Schema.Types.ObjectId, ref:"CoffeeCompanion", required:true
+    },
     name:{
         type: String,
         required: true
@@ -9,7 +12,7 @@ const CoffeeProfile = new mongoose.Schema({
         type: String,
     },
     flavourProfile:{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId, ref:"Recipe",
         required: true
     },
     description: {

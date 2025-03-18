@@ -1,11 +1,14 @@
 const express = require("express");
-const { createLeaderboardEntry, getAllLeaderboardEntries, getLeaderboardEntryById, deleteLeaderboardEntry } = require("../controllers/LeaderboardController");
+const leaderboardController = require("../controllers/LeaderboardController");
+
+
 
 const router = express.Router();
 
-router.post("/leaderboards", createLeaderboardEntry);
-router.get("/leaderboards", getAllLeaderboardEntries);
-router.get("/leaderboards/:id", getLeaderboardEntryById);
-router.delete("/leaderboards/:id", deleteLeaderboardEntry);
+router.get("/leaderboard", leaderboardController.getLeaderboard);
+router.get("/leaderboard/:id", leaderboardController.getLeaderboardById);
+router.post("/leaderboard", leaderboardController.createLeaderboard);
+router.put("/leaderboard/:id", leaderboardController.updateLeaderboard);
+router.delete("/leaderboard/:id", leaderboardController.deleteLeaderboard);
 
 module.exports = router;

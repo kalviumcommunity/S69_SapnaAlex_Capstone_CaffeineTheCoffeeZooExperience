@@ -35,7 +35,7 @@ app.use("/api/comments", commentRoutes);
 app.use("/api/favorites", favoriteRoutes);
 app.use("/api/files", fileUploadRoutes);
 app.use("/api/games", gameRoutes);
-app.use("/api/leaderboards", leaderboardRoutes);
+app.use("/api", leaderboardRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/coffee-profiles", coffeeProfileRoutes);
 app.use("/api/coffee-companions", coffeeCompanionRoutes);

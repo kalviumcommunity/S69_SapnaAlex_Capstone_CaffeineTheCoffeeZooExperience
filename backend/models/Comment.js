@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const Comments = new mongoose.Schema({
     username:{
-        type: String
+        type: mongoose.Schema.Types.ObjectId, ref:"User", required: true
     },
+    recipe: {type: mongoose.Schema.Types.ObjectId, ref:"Recipe", required: true},
     content:{
         type: String,
         required: true

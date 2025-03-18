@@ -21,7 +21,9 @@ exports.getAllFavorites = async (req, res) => {
 
 exports.getFavoriteById = async (req, res) => {
     try {
-        const favorite = await Favorites.findById(req.params.id);
+        const favorite = await Favorites.findById(req.params.id)
+            .populate("user", "username email")
+            .populate("recipe", "title description");
         if (!favorite) return res.status(404).json({ message: "Favorite not found" });
         res.status(200).json(favorite);
     } catch (error) {

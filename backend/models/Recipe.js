@@ -25,7 +25,10 @@ const Recipes = new mongoose.Schema({
     recipe: {
         type: String,
         required: true
-    }
+    },
+    createdBy: {type: mongoose.Schema.Types.ObjectId, ref:"User", required: true},
+    comments: [{type: mongoose.Schema.Types.ObjectId, ref:"Comment"}],
+    favoriteCount: {type: Number, default: 0}
 })
 
 module.exports = mongoose.model("RecipeSchema", Recipes);

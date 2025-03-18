@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const FileUpload = new mongoose.Schema({
+    uploadeBy:{
+        type: mongoose.Schema.Types.ObjectId, ref:"User"
+    },
     fileName:{
         type: String,
         required: true
@@ -13,6 +16,9 @@ const FileUpload = new mongoose.Schema({
         type: String,
         required: true
     },
+    relatedPost:{
+        type: mongoose.Schema.Types.ObjectId, ref:"Post"
+    }
     
 },{timestamps: true});
 

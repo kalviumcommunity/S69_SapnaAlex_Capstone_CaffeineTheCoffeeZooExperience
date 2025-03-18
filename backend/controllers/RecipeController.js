@@ -10,6 +10,26 @@ exports.createRecipe = async (req, res) => {
     }
 };
 
+exports.getAllRecipes = async (req, res) => {
+    try {
+        const { userId } = req.query;
+
+        let filter = {};
+        if (userId) {
+            filter = { user: userId };
+        }
+
+        const recipes = await Recipe.find(filter)
+            .populate("user", "name email") 
+            .sort({ createdAt: -1 }); 
+
+        res.status(200).json(recipes);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+
 exports.getRecipesByUser = async (req, res) => {
     try {
         const recipes = await Recipe.find({ userId: { $in: [req.user.id, req.params.userId] } });
