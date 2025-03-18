@@ -4,8 +4,8 @@ const { uploadFile, getAllFiles, getFileById, deleteFile } = require("../control
 const router = express.Router();
 
 router.post("/files", uploadFile);
-router.get("/files", getAllFiles);
-router.get("/files/:id", getFileById);
+router.get("/files", getAllFiles); //Implemented Get API
+router.get("/files/:id", getFileById); //Implemented Get API
 router.delete("/files/:id", deleteFile);
 
 module.exports = router;

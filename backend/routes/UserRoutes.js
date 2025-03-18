@@ -5,8 +5,8 @@ const{ createUser, getAllUsers, getUserById, updateUser, deleteUser } = require(
 const router = express.Router();
 
 router.post("/users", createUser);
-router.get("/users", getAllUsers);
-router.get("/users/:id", getUserById);
+router.get("/users", getAllUsers); //Implemented Get API
+router.get("/users/:id", getUserById); //Implemented Get API
 router.put("/users/:id", updateUser);
 router.delete("/users/:id", deleteUser);
 

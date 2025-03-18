@@ -10,6 +10,7 @@ exports.uploadFile = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getAllFiles = async (req, res) => {
     try {
         const files = await FileUpload.find();
@@ -19,6 +20,7 @@ exports.getAllFiles = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getFileById = async (req, res) => {
     try {
         const file = await FileUpload.findById(req.params.id)

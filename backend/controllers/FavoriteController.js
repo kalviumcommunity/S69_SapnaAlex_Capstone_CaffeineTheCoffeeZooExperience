@@ -10,6 +10,7 @@ exports.addFavorite = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getAllFavorites = async (req, res) => {
     try {
         const favorites = await Favorites.find();
@@ -19,6 +20,7 @@ exports.getAllFavorites = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getFavoriteById = async (req, res) => {
     try {
         const favorite = await Favorites.findById(req.params.id)

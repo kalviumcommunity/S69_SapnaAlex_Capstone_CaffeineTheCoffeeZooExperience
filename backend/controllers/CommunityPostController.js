@@ -10,6 +10,7 @@ exports.createPost = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getAllPosts = async (req, res) => {
     try {
         const posts = await Post.find();
@@ -19,6 +20,7 @@ exports.getAllPosts = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getPostById = async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)

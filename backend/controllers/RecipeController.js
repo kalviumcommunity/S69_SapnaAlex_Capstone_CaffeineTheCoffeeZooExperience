@@ -10,6 +10,7 @@ exports.createRecipe = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getAllRecipes = async (req, res) => {
     try {
         const { userId } = req.query;
@@ -30,6 +31,7 @@ exports.getAllRecipes = async (req, res) => {
 };
 
 
+//Implemented Get API
 exports.getRecipesByUser = async (req, res) => {
     try {
         const recipes = await Recipe.find({ userId: { $in: [req.user.id, req.params.userId] } });

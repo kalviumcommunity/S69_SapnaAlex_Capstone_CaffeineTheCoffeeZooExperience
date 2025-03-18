@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.post("/", createProfile);
 
-router.get("/profiles", getAllProfiles);
-router.get("/profiles/:id", getProfileById);
+router.get("/profiles", getAllProfiles); //Implemented Get API
+router.get("/profiles/:id", getProfileById); //Implemented Get API
 router.put("/profiles/:id", updateProfile);
 router.delete("/profiles/:id", deleteProfile);
 
