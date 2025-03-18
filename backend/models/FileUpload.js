@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const FileUpload = new mongoose.Schema({
-    uploadeBy:{
+    uploadedBy:{
         type: mongoose.Schema.Types.ObjectId, ref:"User"
     },
     fileName:{
