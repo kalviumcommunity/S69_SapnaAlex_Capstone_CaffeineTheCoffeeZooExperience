@@ -1,7 +1,8 @@
 const Users = require("../models/User");
 
 
-exports.createUser = async (req, res) => { 
+
+exports.createUser = async  (req, res) => { 
     try{
         const newUser = new Users(req.body);
         await newUser.save();
@@ -13,7 +14,7 @@ exports.createUser = async (req, res) => {
 };
 
 
-//Implemented Get API
+
 exports.getAllUsers = async (req, res) =>{
     try{
         const users = await Users.find();
@@ -25,7 +26,7 @@ exports.getAllUsers = async (req, res) =>{
 };
 
 
-//Implemented Get API
+
 exports.getUserById = async (req, res) =>{
     try{
         const user = await Users.findById(req.params.id)

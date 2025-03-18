@@ -3,9 +3,9 @@ const { createRecipe, getRecipesByUser, updateRecipe, deleteRecipe, getAllRecipe
 
 const router = express.Router();
 
-router.post("/recipes", createRecipe);
-router.get("/recipes", getAllRecipes); //Implemented Get API
-router.get("/recipes/:userId", getRecipesByUser); //Implemented Get API
+router.post("/recipes", createRecipe); 
+router.get("/recipes", getAllRecipes); 
+router.get("/recipes/:userId", getRecipesByUser); 
 router.put("/recipes/:id", updateRecipe);
 router.delete("/recipes/:id", deleteRecipe);
 

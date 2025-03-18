@@ -1,5 +1,7 @@
 const Games = require("../models/Games");
 
+
+
 exports.createGame = async (req, res) => {
     try {
         const newGame = new Games(req.body);
@@ -10,7 +12,7 @@ exports.createGame = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getAllGames = async (req, res) => {
     try {
         const games = await Games.find();
@@ -20,7 +22,7 @@ exports.getAllGames = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getGameById = async (req, res) => {
     try {
         const game = await Games.findById(req.params.id)
