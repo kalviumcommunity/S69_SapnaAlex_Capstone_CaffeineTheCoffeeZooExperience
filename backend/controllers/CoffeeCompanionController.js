@@ -21,13 +21,17 @@ exports.getAllCompanions = async (req, res) => {
 
 exports.getCompanionById = async (req, res) => {
     try {
-        const companion = await CoffeeCompanion.findById(req.params.id);
+        const companion = await CoffeeCompanion.findById(req.params.id)
+            .populate("user", "username email");
+
         if (!companion) return res.status(404).json({ message: "Companion not found" });
+
         res.status(200).json(companion);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 exports.updateCompanion = async (req, res) => {
     try {

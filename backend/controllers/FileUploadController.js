@@ -21,13 +21,17 @@ exports.getAllFiles = async (req, res) => {
 
 exports.getFileById = async (req, res) => {
     try {
-        const file = await FileUpload.findById(req.params.id);
+        const file = await FileUpload.findById(req.params.id)
+            .populate("user", "name email"); // Fetch uploader info
+
         if (!file) return res.status(404).json({ message: "File not found" });
+
         res.status(200).json(file);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 exports.deleteFile = async (req, res) => {
     try {

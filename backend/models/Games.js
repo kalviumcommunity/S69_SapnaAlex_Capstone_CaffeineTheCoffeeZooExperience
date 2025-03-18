@@ -18,8 +18,12 @@ const Games = new mongoose.Schema({
     description:{
         type: String,
         required: true
+    }, 
+    highestScore:{
+        type: mongoose.Schema.Types.ObjectId, ref:"Leaderboards"
     }
+   
 
-})
+},{timestamps:true});
 
 module.exports = mongoose.model("GamesSchema", Games);

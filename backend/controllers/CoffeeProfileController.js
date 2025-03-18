@@ -28,7 +28,9 @@ exports.getAllProfiles = async (req, res) => {
 
 exports.getProfileById = async (req, res) => {
     try {
-        const profile = await CoffeeProfile.findById(req.params.id);
+        const profile = await CoffeeProfile.findById(req.params.id)
+            .populate("coffeeSpecies", "CompanionName origin")
+            .populate("user","username email");
         if (!profile) return res.status(404).json({ message: "Profile not found" });
         res.status(200).json(profile);
     } catch (error) {

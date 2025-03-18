@@ -21,13 +21,17 @@ exports.getAllGames = async (req, res) => {
 
 exports.getGameById = async (req, res) => {
     try {
-        const game = await Games.findById(req.params.id);
+        const game = await Games.findById(req.params.id)
+            .populate("user", "name email"); 
+
         if (!game) return res.status(404).json({ message: "Game not found" });
+
         res.status(200).json(game);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 exports.updateGame = async (req, res) => {
     try {

@@ -29,7 +29,11 @@ const Users = new mongoose.Schema({
     createdAt:{
         type: Date,
         default: Date.now
-    }
+    },
+    recipes: [{type: mongoose.Schema.Types.ObjectId, ref: "Recipe"}],
+    favorites: [{type: mongoose.Schema.Types.ObjectId, ref:"Recipe"}],
+    comments: [{type: mongoose.Schema.Types.ObjectId, ref:"Comment"}],
+    leaderboard: {type: mongoose.Schema.Types.ObjectId, ref:"Leaderboards"}
 
 })
 

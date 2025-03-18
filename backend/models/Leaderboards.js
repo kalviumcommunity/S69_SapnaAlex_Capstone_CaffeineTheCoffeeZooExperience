@@ -11,6 +11,6 @@ const Leaderboards = new mongoose.Schema({
     rank:{
         type: Number
     }
-})
+},{timestamps: true});
 
 module.exports = mongoose.model("LeaderboardSchema", Leaderboards);

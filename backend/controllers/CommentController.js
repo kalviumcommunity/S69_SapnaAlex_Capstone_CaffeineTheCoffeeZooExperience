@@ -21,13 +21,17 @@ exports.getAllComments = async (req, res) => {
 
 exports.getCommentById = async (req, res) => {
     try {
-        const comment = await Comment.findById(req.params.id);
+        const comment = await Comment.findById(req.params.id)
+            .populate("user", "name email"); 
+            
         if (!comment) return res.status(404).json({ message: "Comment not found" });
+
         res.status(200).json(comment);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 exports.updateComment = async (req, res) => {
     try {

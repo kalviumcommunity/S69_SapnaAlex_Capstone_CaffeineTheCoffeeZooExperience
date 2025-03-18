@@ -10,7 +10,7 @@ const CoffeeCompanion = new mongoose.Schema({
         required: true
     },
     coffeeProfile:{
-        type: String
+        type: mongoose.Schema.Types.ObjectId, ref:"CoffeeProfile"
     }
 })
 
