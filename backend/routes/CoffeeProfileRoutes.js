@@ -3,7 +3,7 @@ const { createProfile, getAllProfiles, getProfileById, updateProfile, deleteProf
 
 const router = express.Router();
 
-// Post
+
 router.post("/", createProfile); 
 
 router.get("/profiles", getAllProfiles); //Implemented Get API

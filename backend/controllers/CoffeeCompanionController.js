@@ -1,6 +1,6 @@
 const CoffeeCompanion = require("../models/CoffeeCompanion");
 
-// Post
+
 exports.createCompanion = async (req, res) => {
     try {
         const newCompanion = new CoffeeCompanion(req.body);

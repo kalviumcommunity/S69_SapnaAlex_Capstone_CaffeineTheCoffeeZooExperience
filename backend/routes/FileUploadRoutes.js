@@ -3,7 +3,7 @@ const { uploadFile, getAllFiles, getFileById, deleteFile } = require("../control
 
 const router = express.Router();
 
-// Post
+
 router.post("/files", uploadFile); 
 router.get("/files", getAllFiles); 
 router.get("/files/:id", getFileById); 

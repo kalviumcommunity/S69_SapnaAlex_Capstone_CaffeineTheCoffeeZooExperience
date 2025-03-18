@@ -3,7 +3,7 @@ const { createPost, getAllPosts, getPostById, deletePost } = require("../control
 
 const router = express.Router();
 
-// Post
+
 router.post("/posts", createPost); 
 router.get("/posts", getAllPosts); 
 router.get("/posts/:id", getPostById); 

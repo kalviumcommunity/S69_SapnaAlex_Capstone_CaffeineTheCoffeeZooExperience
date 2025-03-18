@@ -3,7 +3,7 @@ const { createCompanion, getAllCompanions, getCompanionById, updateCompanion, de
 const Post = require("../models/Post");
 
 const router = express.Router();
-// Post
+
 router.post("/companions", createCompanion); 
 router.get("/companions", getAllCompanions); 
 router.get("/companions/:id", getCompanionById); 

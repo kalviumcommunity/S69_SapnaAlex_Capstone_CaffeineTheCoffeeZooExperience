@@ -3,7 +3,7 @@ const { createComment, getAllComments, getCommentById, updateComment, deleteComm
 
 const router = express.Router();
 
-// Post
+
 router.post("/comments", createComment); 
 router.get("/comments", getAllComments); 
 router.get("/comments/:id", getCommentById); 

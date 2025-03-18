@@ -25,7 +25,7 @@ const getLeaderboardById = async (req, res) => {
     }
 };
 
-// Post
+
 const createLeaderboard = async (req, res) => {
     try {
         const newEntry = new Leaderboards(req.body);

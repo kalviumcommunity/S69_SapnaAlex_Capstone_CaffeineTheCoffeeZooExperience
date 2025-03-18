@@ -1,7 +1,7 @@
 const Games = require("../models/Games");
 
 
-// Post
+
 exports.createGame = async (req, res) => {
     try {
         const newGame = new Games(req.body);

@@ -3,7 +3,7 @@ const { addFavorite, getAllFavorites, getFavoriteById, removeFavorite } = requir
 
 const router = express.Router();
 
-// Post
+
 router.post("/favorites", addFavorite)
 router.get("/favorites", getAllFavorites); 
 router.get("/favorites/:id", getFavoriteById); 

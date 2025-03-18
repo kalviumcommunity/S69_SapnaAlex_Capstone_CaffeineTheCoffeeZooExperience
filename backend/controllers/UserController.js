@@ -1,7 +1,7 @@
 const Users = require("../models/User");
 
 
-// Post
+
 exports.createUser = async  (req, res) => { 
     try{
         const newUser = new Users(req.body);

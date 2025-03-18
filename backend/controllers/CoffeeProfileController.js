@@ -1,7 +1,7 @@
 const CoffeeProfile = require("../models/CoffeeProfile");
 
 
-// Post
+
 exports.createProfile = async (req, res) => {
     try {
         const { name, origin, flavourProfile, description } = req.body;
