@@ -1,7 +1,7 @@
 const Notification = require("../models/Notification");
 
 
-
+// Post
 exports.createNotification = async (req, res) => {
     try {
         const newNotification = new Notification(req.body);

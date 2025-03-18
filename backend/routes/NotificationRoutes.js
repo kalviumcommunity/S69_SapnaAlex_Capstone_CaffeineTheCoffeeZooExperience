@@ -8,7 +8,7 @@ const {
 
 const router = express.Router();
 
-
+// Post
 router.post("/notifications", createNotification); 
 
 

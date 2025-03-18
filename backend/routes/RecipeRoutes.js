@@ -3,6 +3,7 @@ const { createRecipe, getRecipesByUser, updateRecipe, deleteRecipe, getAllRecipe
 
 const router = express.Router();
 
+// Post
 router.post("/recipes", createRecipe); 
 router.get("/recipes", getAllRecipes); 
 router.get("/recipes/:userId", getRecipesByUser); 

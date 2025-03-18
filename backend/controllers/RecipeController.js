@@ -1,7 +1,7 @@
 const Recipe = require("../models/Recipe");
 
 
-
+// Post
 exports.createRecipe = async (req, res) => {
     try {
         const newRecipe = new Recipe({ ...req.body, userId: req.user.id });

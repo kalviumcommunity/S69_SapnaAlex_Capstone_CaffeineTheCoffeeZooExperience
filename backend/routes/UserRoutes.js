@@ -4,6 +4,7 @@ const{ createUser, getAllUsers, getUserById, updateUser, deleteUser } = require(
 
 const router = express.Router();
 
+// Post
 router.post("/users", createUser); 
 router.get("/users", getAllUsers); 
 router.get("/users/:id", getUserById); 

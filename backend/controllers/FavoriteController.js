@@ -1,6 +1,7 @@
 const Favorites = require("../models/Favorites");
 
 
+// Post
 exports.addFavorite = async (req, res) => {
     try {
         const newFavorite = new Favorites(req.body);

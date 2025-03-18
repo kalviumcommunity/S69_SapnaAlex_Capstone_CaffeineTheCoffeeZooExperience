@@ -1,6 +1,6 @@
 const FileUpload = require("../models/FileUpload");
 
-
+// Post
 exports.uploadFile = async (req, res) => {
     try {
         const newFile = new FileUpload(req.body);

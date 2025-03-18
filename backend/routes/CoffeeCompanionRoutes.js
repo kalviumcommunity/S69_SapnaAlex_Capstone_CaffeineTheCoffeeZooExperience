@@ -1,8 +1,9 @@
 const express = require("express");
 const { createCompanion, getAllCompanions, getCompanionById, updateCompanion, deleteCompanion } = require("../controllers/CoffeeCompanionController");
+const Post = require("../models/Post");
 
 const router = express.Router();
-
+// Post
 router.post("/companions", createCompanion); 
 router.get("/companions", getAllCompanions); 
 router.get("/companions/:id", getCompanionById); 
