@@ -12,6 +12,7 @@ exports.createNotification = async (req, res) => {
 };
 
 
+//Implemented Get API
 exports.getAllNotifications = async (req, res) => {
     try {
         const notifications = await Notification.find().populate("user", "username email").sort({ createdAt: -1 });
@@ -22,6 +23,7 @@ exports.getAllNotifications = async (req, res) => {
 };
 
 
+//Implemented Get API
 exports.getNotificationsByUserId = async (req, res) => {
     try {
         const notifications = await Notification.find({ user: req.params.userId })

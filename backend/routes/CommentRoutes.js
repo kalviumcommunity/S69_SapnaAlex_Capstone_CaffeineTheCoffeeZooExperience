@@ -4,8 +4,8 @@ const { createComment, getAllComments, getCommentById, updateComment, deleteComm
 const router = express.Router();
 
 router.post("/comments", createComment);
-router.get("/comments", getAllComments);
-router.get("/comments/:id", getCommentById);
+router.get("/comments", getAllComments); //Implemented Get API
+router.get("/comments/:id", getCommentById); //Implemented Get API
 router.put("/comments/:id", updateComment);
 router.delete("/comments/:id", deleteComment);
 

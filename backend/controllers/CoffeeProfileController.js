@@ -17,6 +17,7 @@ exports.createProfile = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getAllProfiles = async (req, res) => {
     try {
         const profiles = await CoffeeProfile.find();
@@ -26,6 +27,7 @@ exports.getAllProfiles = async (req, res) => {
     }
 };
 
+//Implemented Get API
 exports.getProfileById = async (req, res) => {
     try {
         const profile = await CoffeeProfile.findById(req.params.id)
