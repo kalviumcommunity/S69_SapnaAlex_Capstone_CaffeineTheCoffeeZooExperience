@@ -3,9 +3,10 @@ const { createPost, getAllPosts, getPostById, deletePost } = require("../control
 
 const router = express.Router();
 
-router.post("/posts", createPost);
-router.get("/posts", getAllPosts); //Implemented Get API
-router.get("/posts/:id", getPostById); //Implemented Get API
+
+router.post("/posts", createPost); 
+router.get("/posts", getAllPosts); 
+router.get("/posts/:id", getPostById); 
 router.delete("/posts/:id", deletePost);
 
 module.exports = router;

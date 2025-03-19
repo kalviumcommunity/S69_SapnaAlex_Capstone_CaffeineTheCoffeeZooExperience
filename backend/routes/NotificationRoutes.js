@@ -9,15 +9,10 @@ const {
 const router = express.Router();
 
 
-router.post("/notifications", createNotification);
-
-
-router.get("/notifications", getAllNotifications); //Implemented Get API
-
-
-router.get("/notifications/user/:userId", getNotificationsByUserId); //Implemented Get API
-
-
+router.post("/notifications", createNotification); 
+router.get("/notifications", getAllNotifications); 
+router.get("/notifications/user/:userId", getNotificationsByUserId); 
 router.delete("/notifications/:id", deleteNotification);
+
 
 module.exports = router;

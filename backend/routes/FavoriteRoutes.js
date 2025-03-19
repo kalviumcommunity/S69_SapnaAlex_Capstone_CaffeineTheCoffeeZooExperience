@@ -3,9 +3,10 @@ const { addFavorite, getAllFavorites, getFavoriteById, removeFavorite } = requir
 
 const router = express.Router();
 
-router.post("/favorites", addFavorite);
-router.get("/favorites", getAllFavorites); //Implemented Get API
-router.get("/favorites/:id", getFavoriteById); //Implemented Get API
+
+router.post("/favorites", addFavorite)
+router.get("/favorites", getAllFavorites); 
+router.get("/favorites/:id", getFavoriteById); 
 router.delete("/favorites/:id", removeFavorite);
 
 module.exports = router;

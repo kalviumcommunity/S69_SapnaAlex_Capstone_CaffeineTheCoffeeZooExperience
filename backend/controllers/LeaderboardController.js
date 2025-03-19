@@ -2,7 +2,7 @@ const Leaderboards = require("../models/Leaderboards");
 
 
 
-//Implemented Get API
+
 const getLeaderboard = async (req, res) => {
     try {
         const leaderboard = await Leaderboards.find();
@@ -12,7 +12,7 @@ const getLeaderboard = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 const getLeaderboardById = async (req, res) => {
     try {
         const leaderboardEntry = await Leaderboards.findById(req.params.id);
@@ -24,6 +24,7 @@ const getLeaderboardById = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 const createLeaderboard = async (req, res) => {
     try {

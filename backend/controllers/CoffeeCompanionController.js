@@ -1,5 +1,6 @@
 const CoffeeCompanion = require("../models/CoffeeCompanion");
 
+
 exports.createCompanion = async (req, res) => {
     try {
         const newCompanion = new CoffeeCompanion(req.body);
@@ -10,7 +11,7 @@ exports.createCompanion = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getAllCompanions = async (req, res) => {
     try {
         const companions = await CoffeeCompanion.find();
@@ -20,7 +21,7 @@ exports.getAllCompanions = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getCompanionById = async (req, res) => {
     try {
         const companion = await CoffeeCompanion.findById(req.params.id)

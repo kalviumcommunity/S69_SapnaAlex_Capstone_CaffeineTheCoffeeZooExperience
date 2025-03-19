@@ -1,5 +1,7 @@
 const Comment = require("../models/Comment");
 
+
+
 exports.createComment = async (req, res) => {
     try {
         const newComment = new Comment(req.body);
@@ -10,7 +12,7 @@ exports.createComment = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getAllComments = async (req, res) => {
     try {
         const comments = await Comment.find();
@@ -20,7 +22,7 @@ exports.getAllComments = async (req, res) => {
     }
 };
 
-//Implemented Get API
+
 exports.getCommentById = async (req, res) => {
     try {
         const comment = await Comment.findById(req.params.id)
