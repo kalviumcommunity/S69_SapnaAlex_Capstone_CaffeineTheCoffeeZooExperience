@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Update Bruno/API templates in application repo",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

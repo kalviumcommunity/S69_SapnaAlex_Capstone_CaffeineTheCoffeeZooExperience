@@ -1,0 +1,19 @@
+meta {
+  name: POST Testing
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:5000/api/leaderboard
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "Sara",
+    "score": "200",
+    "rank": "100"
+  }
+}
