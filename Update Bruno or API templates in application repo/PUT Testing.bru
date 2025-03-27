@@ -1,0 +1,19 @@
+meta {
+  name: PUT Testing
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:5000/api/leaderboard/67d8141e4e10b0efe7953451
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username":"Sarah",
+    "score": "201",
+    "rank": "99"
+  }
+}
