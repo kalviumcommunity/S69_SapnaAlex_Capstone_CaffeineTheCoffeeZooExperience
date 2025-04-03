@@ -18,7 +18,7 @@ const uploadFile = async (req, res) => {
 
         // Validate user ID
         const user = await Users.findById(uploadedBy);
-        console.log
+        
         if (!user) {
             return res.status(400).json({ error: "User not found" });
         }
