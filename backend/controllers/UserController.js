@@ -1,6 +1,6 @@
 const Users = require("../models/User");
 const bcrypt = require("bcryptjs");
-const { generateToken } = require("../config/utils/jwt");
+const { generateToken } = require("../utils/jwt");
 
 exports.loginUser = async (req, res) => {
     try {
