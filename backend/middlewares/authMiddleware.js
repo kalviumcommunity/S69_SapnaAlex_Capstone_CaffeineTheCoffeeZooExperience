@@ -2,6 +2,9 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 require("dotenv").config();
 
+// Submission: Username-Password Authentication ✅
+
+
 const protect = async (req, res, next) => {
     let token;
 
