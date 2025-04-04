@@ -35,6 +35,8 @@ const register = async (req, res) => {
   }
 };
 
+// Submission: Username-Password Authentication ✅
+
 
 // User Login
 const login = async (req, res) => {
